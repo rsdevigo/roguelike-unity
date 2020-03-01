@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0fc25439073844f42b0d0af00a4c8e80
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dmgSprite: {instanceID: 0}
+  - chopSound1: {instanceID: 0}
+  - chopSound2: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

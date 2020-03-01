@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6183674008897471464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6183674008897471469}
+  - component: {fileID: 6183674008897471470}
+  - component: {fileID: 6183674008897471471}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6183674008897471469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6183674008897471464}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6183674008897471470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6183674008897471464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e34320c70e94da2b6cbac96e76f9bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  columns: 8
+  rows: 8
+  wallCount:
+    minimum: 5
+    maximum: 9
+  foodCount:
+    minimum: 1
+    maximum: 5
+  exit: {fileID: 1894837041947408197, guid: a895f245b02ca4471b502cfe596e63d0, type: 3}
+  floorTiles:
+  - {fileID: 1484719413318845106, guid: 1066f7d351238434cb2854929fa2bfb0, type: 3}
+  - {fileID: 713889715304018332, guid: b3107d01b2d3345e3944c9040a89dc75, type: 3}
+  - {fileID: 8905823347984096509, guid: d5a34bd11ea084e12a5c8207836e254c, type: 3}
+  - {fileID: 6037404494138603943, guid: c13aee5a9fbe84cd09d2ec06fadafcdd, type: 3}
+  - {fileID: 6253255650833357244, guid: 746b10be6e04d4181ab9c4d0ea630de4, type: 3}
+  - {fileID: 6273902849035660358, guid: b89ed713609e3413593aa1e74a0999c5, type: 3}
+  - {fileID: 8613752298825454305, guid: 70863a57f2aee4817bb4f5351825898a, type: 3}
+  - {fileID: 865359165411786208, guid: 9a6be440e4f0f4bbda669e831fef5bca, type: 3}
+  wallTiles:
+  - {fileID: 8668666196020896962, guid: 1409cc2fbbe674aec8a058f5b06ba1ef, type: 3}
+  - {fileID: 2944872252736305519, guid: 50f0f08619d314c0cacc506fcfe1ae6f, type: 3}
+  - {fileID: 1910659524683683859, guid: 0c89225050c9046cba0d1b32f9420b9a, type: 3}
+  - {fileID: 5696837370575610819, guid: 93819bd98c4ba4f9a8712d5ac502410d, type: 3}
+  - {fileID: 4638713836880593887, guid: d9f3187eb0d7d4cccaf5a1783cf69912, type: 3}
+  - {fileID: 446971339480713170, guid: 5c8525efb7f1c4a6380e04c66c1f86eb, type: 3}
+  - {fileID: 7714040170949148476, guid: 8cde01c0932274c6aaa11750dc83b041, type: 3}
+  - {fileID: 6941132586913228098, guid: f80f7299db4d6470c953eb796ef73ca8, type: 3}
+  foodTiles:
+  - {fileID: 2253782458617540361, guid: fefd7acfca7b649f18f2d7aed299c9a4, type: 3}
+  - {fileID: 4734835488961352948, guid: e4d8412a0e4224a11ae5c5b3520da2a7, type: 3}
+  enemyTiles:
+  - {fileID: 1637780084878235729, guid: 6e7caa0340a694e22987d83bcee102c7, type: 3}
+  - {fileID: 5185954890786129878, guid: abc3b8ee68a7f4d539496f99ac560425, type: 3}
+  outerWallTiles:
+  - {fileID: 400690031478457956, guid: dbb1e64a853834523a9dc26877093187, type: 3}
+  - {fileID: 1601160338079841321, guid: 31047bc2a4d164f0b8ae264a44edcd5b, type: 3}
+  - {fileID: 8135949581460205236, guid: d3f0323055447459287c4d962ef83fe4, type: 3}
+--- !u!114 &6183674008897471471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6183674008897471464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f66bd06ea8784dcb9dd729608cc0fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnDelay: 0.1
+  levelStartDelay: 2
+  playerFoodPoints: 50
+  playersTurn: 1
+  gameStarted: 1
