@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using Steamworks;
 public class GameManager : MonoBehaviour
 {
     public float turnDelay = 0.1f;
@@ -39,12 +39,15 @@ public class GameManager : MonoBehaviour
         boardScript = GetComponent<BoardManager>();
     }
 
-    async void Start()
+    void Start()
     {
     }
 
     public void GameOver()
     {
+        SteamAPICall_t handle = SteamUserStats.UploadLeaderboardScore(LeaderboardManager.instance.leaderboardHandle,
+        ELeaderboardUploadScoreMethod.k_ELeaderboardUploadScoreMethodKeepBest, level, null, 0);
+        LeaderboardManager.instance.m_LeaderBoardUpdated.Set(handle);
         levelText.text = "After " + level + " days, you starved.";
         levelImage.SetActive(true);
         levelImage.transform.Find("ResetGameButton").gameObject.SetActive(true);
@@ -65,7 +68,6 @@ public class GameManager : MonoBehaviour
     void InitGame()
     {
         doingSetup = true;
-        Debug.Log("AQUIII");
         if (!SoundManager.instance.musicSource.isPlaying)
         {
             SoundManager.instance.musicSource.Play();
