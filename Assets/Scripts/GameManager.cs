@@ -65,7 +65,6 @@ public class GameManager : MonoBehaviour
     void InitGame()
     {
         doingSetup = true;
-        Debug.Log("AQUIII");
         if (!SoundManager.instance.musicSource.isPlaying)
         {
             SoundManager.instance.musicSource.Play();
