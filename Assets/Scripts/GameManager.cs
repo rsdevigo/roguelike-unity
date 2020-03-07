@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         boardScript = GetComponent<BoardManager>();
     }
 
-    async void Start()
+    void Start()
     {
     }
 
