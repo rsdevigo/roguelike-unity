@@ -26,15 +26,18 @@ public class Enemy : MovingObject
         base.Start();
     }
 
-    public void DamageEnemy(int damage) {
+    public void DamageEnemy(int damage)
+    {
         hp -= damage;
         SoundManager.instance.RandomizeSfx(enemyChop1, enemyChop2);
         if (hp <= 0)
             gameObject.SetActive(false);
     }
 
-    protected override void AttemptMove(int xDir, int yDir) {
-        if (skipMove) {
+    protected override void AttemptMove(int xDir, int yDir)
+    {
+        if (skipMove)
+        {
             skipMove = false;
             return;
         }
@@ -44,41 +47,48 @@ public class Enemy : MovingObject
         return;
     }
 
-    public void MoveEnemy() {
+    public void MoveEnemy()
+    {
         int xDir = 0;
         int yDir = 0;
 
-        if (Mathf.Abs(target.position.x - transform.position.x) < float.Epsilon) {
+        if (Mathf.Abs(target.position.x - transform.position.x) < float.Epsilon)
+        {
             yDir = target.position.y > transform.position.y ? 1 : -1;
-        } else {
+        }
+        else
+        {
             xDir = target.position.x > transform.position.x ? 1 : -1;
         }
+        isMoving = true;
         AttemptMove(xDir, yDir);
     }
 
-    protected override void OnCantMove (RaycastHit2D hit) {
+    protected override void OnCantMove(RaycastHit2D hit)
+    {
         Player hitPlayer = hit.transform.GetComponent<Player>();
         Wall hitWall = hit.transform.GetComponent<Wall>();
-        if (hitPlayer != null) {
+        if (hitPlayer != null)
+        {
             hitPlayer.LooseFood(playerDamage);
             animator.SetTrigger("enemyAttack");
             SoundManager.instance.RandomizeSfx(enemyAttack1, enemyAttack2);
-            return;
+            //return;
         }
 
-        if (hitWall != null) {
+        if (hitWall != null)
+        {
             hitWall.DamageWall(wallDamage);
             animator.SetTrigger("enemyAttack");
             SoundManager.instance.RandomizeSfx(enemyChop1, enemyChop2);
-            return;
+            //return;
         }
-
         return;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
